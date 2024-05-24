@@ -1,0 +1,43 @@
+# calculation name
+ SYSTEM = C2H4
+
+# electronic relaxation
+ ENCUT = 500        # specifies the cutoff energy for the planewave basis set (eV)
+ EDIFF = 1.0E-4     # electronic break condition
+ ALGO = Normal      # algorithm used to optimize orbitals
+
+# grid points in the FFT-grid (wrap around errors)
+#PREC = Accurate
+#NGX =
+#NGY =
+#NGZ =
+
+# ionic relaxation
+ EDIFFG = -0.05     # ionic relaxation break condition
+ NSW = 30
+ IBRION = 2         # determines how the ions are updated and moved
+ ISYM = -1          # symmetry treatment
+ SIGMA = 0.05       # width of smearing (controls resolution of DOS)
+ ISMEAR = 0         # broadening and DOS related values: SIGMA specifies the width of the smearing in eV, and ISMEAR determines how the partial occupancies are set for each orbital
+
+# E(xc)
+ GGA = PE           # specifies the functional used
+
+# speed-up/parallelization
+ NPAR = 3           # NPAR determines the number of bands that are treated in parallel
+#NCORE =            # NCORE determines the number of compute cores that work on an individual orbital
+#KPAR =             # determines the number of k-points that are to be treated in parallel
+#NBANDS = 
+#NSIM =             # sets the number of bands that are optimized simultaneously by the RMM-DIIS algorithm (ILAGO=48)
+#LPLANE = TRUE      # switches on the plane-wise data distribution in real space
+#LREAL = AUTO       # real space projection (TRUE), or reciprocal space (FALSE). Can also be Auto or A
+
+# writing
+ NWRITE = 2         # how much detail is written in the OUTCAR
+ LWAVE = FALSE      # determines whether the wavefunctions are written to the WAVECAR file at the end of a run
+ LCHARG = FALSE     # determines whether the charge densities (files CHGCAR and CHG) are written
+ LPARD = FALSE
+ LVTOT = FALSE
+ LVHAR = FALSE
+ LELF = FALSE       # determines whether to write ELFCAR. ELFCAR contains the electron localization functions in CHGCAR format. Avoid wrap around errors when this is on and set NPAR to 1.
+ LOPTICS = FALSE
