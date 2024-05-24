@@ -4,7 +4,7 @@ Following instructions are for maintainers only, not for attendees.
 
 First, install [MkDocs](https://www.mkdocs.org/) and other dependencies in a Python virtual environment:
 
-## How to contribure to this workshop material
+## How to contribure to this workshop
 
 Commits to the 'main' branch are deployed automatically at https://johnryder23.github.io/VASP_workshop/ .
 
