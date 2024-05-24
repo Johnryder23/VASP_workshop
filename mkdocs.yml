@@ -1,0 +1,11 @@
+site_name: "VASP workshop"
+site_url: https://example.com/
+
+nav:
+  - Introduction: 'index.md'
+  - Ethene in vacuum: 'ethene_in_vacuum.md'
+  - GPU calculation: 'GPU_calulation.md'
+  - H2O machine learning: 'H2O_machine_learning_MD.md'
+  - Parallel NEB: 'parallel_NEB.md'
+  - Very parallel: 'very_parallel.md'
+
