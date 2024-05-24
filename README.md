@@ -1,3 +1,7 @@
+SAME EDITS BLA BLA
+
+
+
 This repository hosts the content of the 'Using resources effectively with VASP: exploring GPU and machine learning capability' workshop run by NeSI.
 
 Following instructions are for maintainers only, not for attendees.
