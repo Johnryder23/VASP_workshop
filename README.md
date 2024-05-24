@@ -6,7 +6,7 @@ First, install [MkDocs](https://www.mkdocs.org/) and other dependencies in a Pyt
 
 ## Getting started
 ```
-python -m venv venv
+python3 -m venv venv
 . venv/bin/activate
 pip install -r requirements.txt
 ```
