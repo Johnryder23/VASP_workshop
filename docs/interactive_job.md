@@ -2,7 +2,7 @@
 This calculation is a standard ionic and electronic energy minimisation for ethane in vacuum. Because this calculation is short, we will run it interactively from the command line and use a Bash script to set up and submit the calculation.
 
 
-To start an interactive Slurm job, we will execute `srun` directly from the terminal. Using `srun` instead of `sbatch` submits a job for execution in real time, and prints the output from directly to the terminal. If your connection with NeSI drops, the job will fail - therefor running interactively is only appropriate for short jobs.
+To start an interactive Slurm job, we will execute `srun` directly from the terminal. Using `srun` instead of `sbatch` submits a parallel job (using MPI) for execution in real time, and prints 'stdout' and 'stderr' to the terminal. Note, running a job in this way means If your connection with NeSI drops, the job will fail - therefor running interactively is only appropriate for short jobs.
 
 ## Input parameters
 VASP generally requires four input files:
@@ -11,9 +11,9 @@ Configuration file for VASP. Tells VASP what type of calculation you want to per
 2. KPOINTS
 File specifying the **k** points density. These **k** points are the sampling points of the density in the Brillouin zone. More **k** points is required for systems with large fluctuations in electron density.
 3. POTCAR
-File containing the pseudopotential(s) for all atom(s). 
+File containing the pseudopotential(s) for all atom(s).
 4. POSCAR
-The `POTCAR` specifies the atomic coordinates the calculations starts with.  
+The `POTCAR` specifies the atomic coordinates the calculations starts with.
 
 Lets start by inspecting the `./input/INCAR` file.
 
@@ -36,9 +36,9 @@ The conjugate gradient algorithm determines the movement of ions via the followi
 3. repeat 1.-2. until gradient becomes small or the maximum number of ionic steps is reached
 ```
 
-We set the desired exchange-correlation functional with the `GGA` tag. Keep in mind the GGA type should match that of the `POTCAR` pseudopotential. If these do not match, VASP will give a warning.  
+We set the desired exchange-correlation functional with the `GGA` tag. Keep in mind the GGA type should match that of the `POTCAR` pseudopotential. If these do not match, VASP will give a warning.
 
-Recall that the pseudopotentials in the `POTCAR` file must be sorted according to the order of atoms in the `POSCAR`. ***MENTION ASE UTILITY TO DO THIS HERE*** 
+Recall that the pseudopotentials in the `POTCAR` file must be sorted according to the order of atoms in the `POSCAR`. ***MENTION ASE UTILITY TO DO THIS HERE***
 
 
 ***DISCUSS  NPAR HERE***
@@ -55,7 +55,7 @@ We do this by setting `NPAR = 12` in the `INCAR`.
 
 
 
-## Approximate runtime statistics 
+## Approximate runtime statistics
 --------------------------
 total cpu time (approx): XX:XX:XX
 --------------------------
@@ -71,4 +71,5 @@ CPU efficiency:
 OpenMP threads:
 `XXX`
 --------------------------
+
 
