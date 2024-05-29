@@ -1,10 +1,11 @@
-This repository hosts the content of the 'Using resources effectively with VASP: exploring GPU and machine learning capability' workshop run by NeSI.
+This repository hosts the content of 'Using resources effectively with VASP: exploring GPU and machine learning capability'.
 
-Following instructions are for maintainers only, not for attendees.
+Workshop atendees can follow along with the material deployed using GitHub Pages, [here](https://johnryder23.github.io/VASP_workshop/).  
 
-First, install [MkDocs](https://www.mkdocs.org/) and other dependencies in a Python virtual environment:
+The only other material needed are the scripts located in in the './content' directory of this repository. Simply clone this repo (with 'git clone git@github.com:Johnryder23/VASP_workshop.git') and the navigate into 'VASP_workshop/content'. The rest of the nessessary configurations are provided by host machine, Mahuika.
 
-## How to contribute to this workshop
+
+## If you would like to contribute to this workshop
 
 Commits to the 'main' branch are deployed automatically at https://johnryder23.github.io/VASP_workshop/ .
 
