@@ -19,6 +19,22 @@ File containing the pseudopotential(s) for all atom(s). Order in which pseudopot
 4. POSCAR
 File specifying atomic coordinates. This file will not be update as the calculation proceeds, instead, updated atomic coordinates are printed to the `CONTCAR`.
 
+
+!!! tip
+    We can use ASEs sort utility to sort our `POSCAR` by atom type, and remove duplicates. This will make writing the `POTCAR` file much eaiser.
+    ``` 
+    #!/usr/bin/env python
+    
+    from ase.io import read
+    import sys
+    from ase.build import sort
+    from ase.io import write
+    
+    input=read(str(sys.argv[1]))
+    arrange=sort(input)
+    write(str(sys.argv[1]),arrange,format="vasp")
+    ```
+
 ## Workshop material structure
 NOT UP-TO-DATE
 ```
