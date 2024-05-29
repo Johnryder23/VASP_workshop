@@ -9,3 +9,7 @@ nav:
   - Parallel NEB: 'parallel_NEB.md'
   - Very parallel: 'very_parallel.md'
 
+
+markdown_extensions:
+  - admonition
+
