@@ -6,7 +6,18 @@ Many of you are experienced VASP users, and have been using the programme for so
 - understand parallelisation options of VASP and how to quickly optimize them for your problem
 - Explore machine learning capability of VASP
 - accelerate your VASP calculations using NeSI's GPUs.
-- 
+- ........
+
+## The basics - VASP input files
+VASP generally requires four input files
+1. INCAR
+The runtime settings file for VASP. Tells VASP what type of calculation you want to perform, and the parameters for it to run in.
+2. KPOINTS
+File specifying the **k** points density. **k** points are points at which the electronic structure is sampled in the Brillouin zone (*reciprocal* lattice of a crystalline material). More **k** points is required for systems with large fluctuations in electron density, as these fluctuations may otherwise be poorly described by corse grain sampling.
+3. POTCAR
+File containing the pseudopotential(s) for all atom(s). Order in which pseudopotentials are given must match the atom order in the `POSCAR`.
+4. POSCAR
+File specifying atomic coordinates. This file will not be update as the calculation proceeds, instead, updated atomic coordinates are printed to the `CONTCAR`.
 
 ## Workshop material structure
 NOT UP-TO-DATE
