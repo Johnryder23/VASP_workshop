@@ -1,11 +1,11 @@
 ## General
-This calculation is a standard ionic and electronic energy minimisation for ethane in vacuum. Because this calculation is short, we will run it interactively from the command line and use a Bash script to set up and submit the calculation.
+This calculation is a standard ionic and electronic energy minimisation for ethane in vacuum. Because the calculation is short, it can be run interactively from the command line. A Bash script will be used to set up and submit the calculation.
 
 
-To start an interactive Slurm job, we will execute `srun` directly from the terminal. Using `srun` instead of `sbatch` submits a parallel job (using MPI) for execution in real time, and prints 'stdout' and 'stderr' to the terminal. 
+To start an interactive Slurm job, we will execute `srun` directly - and not from *within* a batch script sumitted with `sbatch`. Subbmitting with `srun` instead of `sbatch` makes the job execute in real time, or, in other words, reads `stdin` from the terminal and prints 'stdout' and 'stderr' to the terminal. 
 
-!!! note
-running a job in this way means if your connection with NeSI drops, the job will fail - as 'stdin'is diretly from the terminal. Therefore running jobs interactively is only appropriate for short calculations.
+!!! warning
+    running a job in this way means if your connection with NeSI drops, the job will fail - as 'stdin'is diretly from the terminal. Therefore running jobs interactively is only appropriate for short calculations.
 
 
 ## Input parameters
