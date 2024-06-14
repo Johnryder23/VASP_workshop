@@ -6,9 +6,8 @@ nav:
   - Interactive Job: 'interactive_job.md'
   - GPU calculation: 'GPU_calulation.md'
   - H2O machine learning: 'H2O_machine_learning_MD.md'
-  - Parallel NEB: 'parallel_NEB.md'
+  - Hybrid parallelisation, Combining MPI and OpenMP: 'hybrid_parallelisation.md'
   - Very parallel: 'very_parallel.md'
-
 
 markdown_extensions:
   - admonition
