@@ -1,4 +1,4 @@
-# *workshop title*
+# Intermediate topics for VASP on NeSI systems
 
 ## Learning goals
 Many of you are experienced VASP users, and have been using the programme for some time. As VASP evolves and more features become available, however, it is easy to carry on with the same workflows and neglect new release features. It is important we optimise our VASP calculations because  VASP users **use the most core hours on NeSI, more than any other programme!**. In the last year
