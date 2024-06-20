@@ -1,4 +1,4 @@
-##Title
+##GPU calculation
 
 I have scrambled the POSCAR a bit here to approximate a real system. The POSCAR defines a system of 432 Fe atoms in a non-perfect lattice! that is a lot of work for VASP...
 
