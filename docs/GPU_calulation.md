@@ -8,7 +8,7 @@ So lets start this job with 2 NVDIA Tesla P100 GPUs.
 
 Lets go onto the node and monitor the GPUs in real time with the `nvidia-smi` command line utility.
 
-???+ question "why is the PID from `nvidia-smi` different to that printed in output file?"
+???+ note "why is the PID from `nvidia-smi` different to that printed in output file?"
     
     notice that the PIDs listed by 'nvidia-smi' are different than those listed at the top of the job_*.out file. Why is this? Recall we started VASP with the following `srun` command:
     ```
