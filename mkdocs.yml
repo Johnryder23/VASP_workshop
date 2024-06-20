@@ -15,7 +15,10 @@ markdown_extensions:
   - pymdownx.superfences
 
 theme:
-  icon:
+   name: material
+   locale: en
+   include_sidebar: true
+   icon:
     admonition:
       note: octicons/tag-16
       abstract: octicons/checklist-16
