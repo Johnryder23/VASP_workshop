@@ -1,5 +1,7 @@
-Automatic mesh
+Regular k-point mesh
 0              ! number of k-points = 0 -> automatic generation scheme 
 Gamma          ! generate a Gamma centered grid
-5  5  5        ! subdivisions N_1, N_2 and N_3 along recipr. latt. vectors
+3  3  3        ! subdivisions N_1, N_2 and N_3 along recipr. latt. vectors
 0. 0. 0.       ! optional shift of the mesh (s_1, s_2, s_3)
+
+# Odd number of k points in each direction results in a gamma centered mesh. Even number will not be gamma point centered
