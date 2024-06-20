@@ -1,5 +1,4 @@
 site_name: "VASP workshop"
-site_url: https://example.com/
 
 nav:
   - Introduction: 'index.md'
