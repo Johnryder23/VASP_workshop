@@ -35,7 +35,7 @@
 #Speed-up/parallelization
 #NCORE =            #determines the number of compute cores that work on an individual orbital
 KPAR = 2            #determines the number of k-points that are to be treated in parallel
-NSIM = 50           #sets the number of bands that are optimized simultaneously by the RMM-DIIS algorithm (ILAGO=48)
+NSIM = 10           #sets the number of bands that are optimized simultaneously by the RMM-DIIS algorithm (ILAGO=48)
 #LPLANE = TRUE      #switches on the plane-wise data distribution in real space
 LREAL = AUTO       #real space projection (TRUE), or reciprocal space (FALSE). Can also be Auto or A
 
