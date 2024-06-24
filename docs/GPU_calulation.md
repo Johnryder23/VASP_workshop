@@ -1,10 +1,10 @@
 ##GPU calculation
 
-I have scrambled the POSCAR a bit here to approximate a real system. The POSCAR defines a system of 432 Fe atoms in a non-perfect lattice! that is a lot of work for VASP...
+Here we have a pretty messsy molecular structure with 232 Si atoms in a Cubic lattice obtained from [mp-1201492](https://next-gen.materialsproject.org/materials/mp-1201492/#crystal_structure). That is a lot of work for VASP...
 
 So lets start this job with 2 NVDIA Tesla P100 GPUs.
 
-
+notice in the INCAR we set EDIFFG = EDIFF = 0. so we will perform 10 electronic SCF loops and 5 ionic steps.
 
 Lets go onto the node and monitor the GPUs in real time with the `nvidia-smi` command line utility.
 

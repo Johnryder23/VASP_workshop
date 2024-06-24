@@ -35,6 +35,10 @@ File specifying atomic coordinates. This file will not be update as the calculat
     write(str(sys.argv[1]),arrange,format="vasp")
     ```
 
+## Literature
+- Nieves-Pírez, Isidoro, et al. "Energy efficiency and performance analysis of a legacy atomic scale materials modeling simulator (VASP)." The Journal of Supercomputing (2024): 1-24.
+
+
 ## Workshop material structure
 NOT UP-TO-DATE
 ```
