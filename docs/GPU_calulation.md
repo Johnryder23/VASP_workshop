@@ -6,7 +6,7 @@ Here we have a pretty messsy molecular structure with 232 Si atoms in a Cubic la
 From `Running VASP on Nvidia GPUs`
 
 !!! note
-    the message "Warning: ieee_invalid is signaling" may appear in your stdout file. This is only a warning, and can safely ignored. We can disable the warning, however, by setting `export NO_STOP_MESSAGE=1` in our submit script.
+    the message `Warning: ieee_invalid is signaling` may appear in your stdout file. This is only a warning, and can safely ignored. We can mute this warning, however, by setting `export NO_STOP_MESSAGE=1` in our submit script.
 
 There is still some work that needs to be done on the GPU. now all 
 

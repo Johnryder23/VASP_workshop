@@ -9,4 +9,7 @@ VASPs main goal is solve the Kohn-Sham (KS) one electron orbitals of our system:
 $$
 H^{ks} \lambda_N{r}
 $$
+
 Where $H^{ks}$ is the Hamiltonian  
+
+
