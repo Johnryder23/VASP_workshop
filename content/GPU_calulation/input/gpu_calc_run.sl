@@ -29,7 +29,6 @@ cd ../output/vasp_job_${SLURM_JOB_ID}
 # Print long name of GPUs available for this job
 echo -e "The following GPUs are allocated to this job:\n$(nvidia-smi -L)"
 
-
 echo -e "\nRecall, MPI VASP distributes work and data over available MPI ranks on a per-orbital basis (in a round-robin fashion). MPI+OpenMP VASP, however, distributes the work of each Bloch orbital over the ${OMP_NUM_THREADS} OpenMP threads, and not between MPI tasks."
 
 export NO_STOP_MESSAGE=1
