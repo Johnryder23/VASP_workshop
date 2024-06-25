@@ -1,9 +1,9 @@
-##Implementation of DFT in VASP
-
 recomemded reading:
  
 - Cramer, C. J. Essentials of Computational Chemistry: Theories and Models; John
 Wiley & Sons, 2004; Chapter 8.
+
+##Implementation of DFT in VASP
 
 VASP can perform methods other than DFT, but here we focus only on the DFT Implementation.
 
@@ -12,12 +12,12 @@ The *Hohenberg–Kohn Existence Theorem* and *Hohenberg–Kohn Variational Theor
 !!! note
     Approximations do eventually enter KS-DFT. Namely the correction to the kinetic energy deriving from the interacting nature of the electrons, and all non-classical corrections to the electron–electron repulsion energy. The exchange-correlation functional ($E_{XC}$) deals with these terms, which we choose with `GGA` tag in the `INCAR`.
 
-VASPs main goal is to solve the Kohn-Sham (KS) one electron orbitals of our system:
+VASPs main goal is to solve the Kohn-Sham (KS) one electron orbitals of our system according to the eigenvalue equation below:
 
 $$
-H^{ks}\psi_N{r}=\epsilon_n \psi_n(r)
+H^{ks}\Psi_n(r)=\epsilon_n \Psi_n(r)
 $$
 
-Where $H^{ks}$ is the Hamiltonian,  $\lambda_n(r)$ describe the eigenfunctions and $\epsilon_n$ describe the values of a given KS orbital $n$. 
+Where $H^{ks}$ is the Hamiltonian, $\Psi_n(r)$ and $\epsilon_n$ are the eigenfunction and eigenvalues of KS orbital $n$. 
 
 Because VASP is often used for bulk-like materials,         The projector-augmented-wave (PAW) methos is used 
