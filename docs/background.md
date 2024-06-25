@@ -17,8 +17,9 @@ VASPs main task is to solve the Kohn-Sham (KS) one electron orbitals of our syst
 \begin{equation}
 H^{ks}\psi_n(r)=\epsilon_n \psi_n(r)
 \tag{}
+\label{KS_energy}
 \end{equation}
 
-Where $H^{ks}$ is the effective Hamiltonian, $\psi_n(r)$ and $\epsilon_n$ are the wavefunction (eigenfunction) and energy (eigenvalue) of KS orbital $n$. The final KS wavefunction (final solution) is a single Slater determinant made of the set of orbitals that are the lowest-energy solutions to 
+Where $H^{ks}$ is the effective Hamiltonian and $\psi_n(r)$ and $\epsilon_n$ are the wavefunction (eigenfunction) and energy (eigenvalue) of KS orbital $n$. The final KS wavefunction (printed in the `WAVECAR` when VASP finishs) is a single Slater determinant made of the set of orbitals that are the lowest-energy solutions to Equation \ref{KS_energy}.
 
 Because VASP is often used for bulk-like materials,         The projector-augmented-wave (PAW) methos is used 
