@@ -1,6 +1,7 @@
 ##Implementation of DFT in VASP
 
-recomemded reading: 
+recomemded reading:
+ 
 - Cramer, C. J. Essentials of Computational Chemistry: Theories and Models; John
 Wiley & Sons, 2004; Chapter 8.
 
@@ -11,7 +12,7 @@ The *Hohenberg–Kohn Existence Theorem* and *Hohenberg–Kohn Variational Theor
 !!! note
     Approximations do eventually enter KS-DFT. Namely the correction to the kinetic energy deriving from the interacting nature of the electrons, and all non-classical corrections to the electron–electron repulsion energy. The exchange-correlation functional ($E_{XC}$) deals with these terms, which we choose with `GGA` tag in the `INCAR`.
 
-VASPs main goal is solve the Kohn-Sham (KS) one electron orbitals of our system:
+VASPs main goal is to solve the Kohn-Sham (KS) one electron orbitals of our system:
 
 $$
 H^{ks}\psi_N{r}=\epsilon_n \psi_n(r)
