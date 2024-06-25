@@ -14,7 +14,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.arithmatex:
-      generic: true
+      katex_inline: true
+      katex_block: true
 
 theme:
    name: material
