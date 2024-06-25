@@ -6,7 +6,14 @@ The "Hohenberg–Kohn Existence Theorem" and "Hohenberg–Kohn Variational Theor
 
 VASPs main goal is solve the Kohn-Sham (KS) one electron orbitals of our system:
 
-$$ H^{ks} \lambda_N{r} $$
+$$
+H^{ks} \lambda_N{r}
+$$
+
+
+$$
+\operatorname{ker} f=\{g\in G:f(g)=e_{H}\}{\mbox{.}}
+$$
 
 Where $H^{ks}$ is the Hamiltonian  
 
