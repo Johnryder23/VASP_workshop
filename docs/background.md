@@ -1,4 +1,4 @@
-recomemded reading:
+recomemded reading for this section:
  
 - Cramer, C. J. Essentials of Computational Chemistry: Theories and Models; John
 Wiley & Sons, 2004; Chapter 8.
