@@ -7,19 +7,6 @@ The only other material needed are the scripts located in in the `./content` dir
 
 ## If you would like to contribute to this workshop
 
-Commits to the `main` branch are deployed automatically at https://johnryder23.github.io/VASP_workshop/ .
+If you would like to contribute to this workshop please create a branch and submit pull request to `main`. The `main` branch is deployed automatically at https://johnryder23.github.io/VASP_workshop/ .
 
-If you would like to make your own edits and deploy them, create a new branch and install MkDocs in a Python virtual environment:
-```
-python3 -m venv venv
-. venv/bin/activate
-pip install mkdocs
-```
-
-Once your virtual environment is ready, compile a local version of the workshop material using:
-
-```
-mkdocs serve
-```
-
-and open your web browser at the address returned by the command.
+If you want to build a local version. the only required python packages are `mkdocs`, and `mkdocs-material`.
