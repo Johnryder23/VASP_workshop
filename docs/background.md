@@ -6,18 +6,17 @@ Wiley & Sons, 2004; Chapter 8.
 
 VASP can perform methods other than DFT, but here we focus only on the DFT Implementation.
 
-The "Hohenberg–Kohn Existence Theorem" and "Hohenberg–Kohn Variational Theorem" proved that it is possible to construct the Hamiltonian, and in turn the wavefunction, solely based on electron density, $n(r)$. Constructing the Hamiltonian in terms of density does not alleviate the Schrödinger equations centrosymmetry issue, though, as the electron-electron interaction has simply been redifned. So a further condition is required. The additional condition is to approximate our system of interest as a system of non-interacting electrons with the same overall density as the real system (this set of non-interacting electrons are the KS orbitals). KS orbitals are iteratively solved, returning lower energies until $n(r)KS=n(r)$ (Variational Theorem). Using this method the real density ($n(r)$) can been determined from one electron density functions *without approximation*. In VASP, we determine the calculation is complete when differences in $E[n(r)KS]$ are within `EDIFF`, or in other words, when $E[n(r)KS]$ is within `EDIFF` of $E[n(r)]$.
+The *Hohenberg–Kohn Existence Theorem* and *Hohenberg–Kohn Variational Theorem* proved that it is possible to construct the Hamiltonian, and in turn the wavefunction, solely based on electron density, $n(r)$. Constructing the Hamiltonian in terms of density does not alleviate the Schrödinger equations centrosymmetry issue, though, as the electron-electron interaction has simply been redifned. So a further condition is required. The additional condition is to approximate our system of interest as a system of non-interacting electrons with the same overall density as the real system (this set of non-interacting electrons are the KS orbitals). KS orbitals are iteratively solved, returning lower energies until $n(r)KS=n(r)$ (Variational Theorem). Using this method the real density ($n(r)$) can been determined from one electron density functions *without approximation*. In VASP, we determine the calculation is complete when differences in $E[n(r)KS]$ are within `EDIFF`, or in other words, when $E[n(r)KS]$ is within `EDIFF` of $E[n(r)]$.
 
 !!! note
     Approximations do eventually enter KS-DFT. Namely the correction to the kinetic energy deriving from the interacting nature of the electrons, and all non-classical corrections to the electron–electron repulsion energy. The exchange-correlation functional ($E_{XC}$) deals with these terms, which we choose with `GGA` in the `INCAR`.
 
-
 VASPs main goal is solve the Kohn-Sham (KS) one electron orbitals of our system:
 
 $$
-H^{ks} \lambda_N{r}
+H^{ks}\lambda_N{r}=\epsilon_n \lambda_n(r)
 $$
 
-Where $H^{ks}$ is the Hamiltonian  
+Where $H^{ks}$ is the Hamiltonian,  $\lambda_n(r)$ describe the eigenfunctions and $\epsilon_n$ describe the values of a given KS orbital $n$. 
 
 
