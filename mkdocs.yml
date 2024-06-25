@@ -35,12 +35,15 @@ theme:
       example: octicons/beaker-16
       quote: octicons/quote-16
 
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css
 
 extra_javascript:
-  - javascripts/katex.js
-  - https://unpkg.com/katex@0/dist/katex.min.js
-  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/contrib/auto-render.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/contrib/auto-render.js
 
-extra_css:
-  - https://unpkg.com/katex@0/dist/katex.min.css
-
+extra:
+  math:
+    engine: katex
+    katex_version: '0.11.1'
