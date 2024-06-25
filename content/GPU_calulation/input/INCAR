@@ -2,12 +2,11 @@
  SYSTEM = my_VASP_calc
 
 #Electronic relaxation
- ENCUT = 0           #specifies the cutoff energy for the planewave basis set in eV
- EDIFF = 1.0E-3      #electronic break condition
- NELM = 15           #max number of electronic selfconsistency steps performed
+ ENCUT = 300         #specifies the cutoff energy for the planewave basis set in eV
+ EDIFF = 1E-4        #electronic break condition
+#NELM = 8            #max number of electronic selfconsistency steps performed
  ALGO = Normal       #algorithm used to optimize orbitals
  ISPIN = 1           #specifies spin polarization, 2=on, 1=off
-#MAGMOM = 2          #specifies the initial magnetic moment for each atom. Format is NIONS * starting local magnetic moment (usually the experimental magnetic moment multiplied by 1.2 or 1.5)			
 
 #Wrap around errors
 #PREC = Accurate
@@ -16,28 +15,22 @@
 #NGZ =
 
 #Ionic relaxation
- EDIFFG = 0               #ionic relaxation break condition. If negative, the relaxation is stopped when the norms of all the forces are smaller than |EDIFFG|.
- NSW = 5                  #max number of ionic steps
+ EDIFFG = -0.001           #ionic relaxation break condition. If negative, the relaxation is stopped when the norms of all the forces are smaller than |EDIFFG|.
+#NSW = 3                  #max number of ionic steps
  IBRION = 2               #determines how the ions are updated and moved
- POTIM = 0.2              #gives the time step (in fs) in all ab-initio Molecular Dynamics runs
  ISYM = 0                 #symmetry treatment
- ISIF = 0                 #determines whether the stress tensor is calculated and which principal degrees-of-freedom are allowed to change in relaxation and molecular dynamics runs
  SIGMA = 0.1              #Width of smearing (controls resolution of DOS)
  ISMEAR = 0               #broadening and DOS related values: SIGMA specifies the width of the smearing in eV, and ISMEAR determines how the partial occupancies are set for each orbital
 
-#Computational parameters
- GGA = PE     #specifies the functional used
-
-#vdW DFT
-# LUSE_VDW = TRUE
-# Zab_VDW = -1.8867
+#Method
+ GGA = PE                 #specifies the functional used
 
 #Speed-up/parallelization
 #NCORE =            #determines the number of compute cores that work on an individual orbital
 KPAR = 2            #determines the number of k-points that are to be treated in parallel
 NSIM = 10           #sets the number of bands that are optimized simultaneously by the RMM-DIIS algorithm (ILAGO=48)
 #LPLANE = TRUE      #switches on the plane-wise data distribution in real space
-LREAL = AUTO       #real space projection (TRUE), or reciprocal space (FALSE). Can also be Auto or A
+LREAL = AUTO        #real space projection (TRUE), or reciprocal space (FALSE). Can also be Auto or A
 
 #DOS
 #LORBIT = 11     #Specifies to write a DOSCAR and the partial DOS (for the TDOS, LORBIT=10)
@@ -48,7 +41,7 @@ LREAL = AUTO       #real space projection (TRUE), or reciprocal space (FALSE). C
 #EFERMI =
 
 #Writing
- NWRITE = 0      #how much detail is written in the OUTCAR
+#NWRITE = 0      #how much detail is written in the OUTCAR
  LWAVE = FALSE   #determines whether the wavefunctions are written to the WAVECAR file at the end of a run
  LCHARG = FALSE  #determines whether the charge densities (files CHGCAR and CHG) are written
  LPARD = FALSE

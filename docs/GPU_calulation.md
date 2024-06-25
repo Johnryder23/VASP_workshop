@@ -2,6 +2,14 @@
 
 Here we have a pretty messsy molecular structure with 232 Si atoms in a Cubic lattice obtained from [mp-1201492](https://next-gen.materialsproject.org/materials/mp-1201492/#crystal_structure). That is a lot of work for VASP...
 
+"Theoretically, the GPU calculations will run faster the higher the value of NSIM you set, with the drawback being that the memory consumption on the GPUs increase with higher NSIM as well. The recommendation from the developers is that you should increase NSIM as much you can until you run out of memory. This can require some experimentation, where you have to launch your VASP job and the follow the memory use with the nvidia-smi -l command. I generally had to stop at NSIM values of 16-32."
+From `Running VASP on Nvidia GPUs`
+
+!!! note
+    the message "Warning: ieee_invalid is signaling" may appear in your stdout file. This is only a warning, and can safely ignored. We can disable the warning, however, by setting `export NO_STOP_MESSAGE=1` in our submit script.
+
+There is still some work that needs to be done on the GPU. now all 
+
 So lets start this job with 2 NVDIA Tesla P100 GPUs.
 
 notice in the INCAR we set EDIFFG = EDIFF = 0. so we will perform 10 electronic SCF loops and 5 ionic steps.

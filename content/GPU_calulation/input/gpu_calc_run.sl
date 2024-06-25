@@ -11,8 +11,8 @@
 ##Parallel options
 #SBATCH --nodes=1
 #SBATCH --ntasks=2
-#SBATCH --cpus-per-task=8                 # We reconmend experimenting with this value. One method to do this is to set NELM=5 and NSW=3 (or something small) in the INCAR and check how long calculation takes to finish. Can also check CPU efficiency after the job has finished with nn_seff <job_id>
-#SBATCH --mem=60G
+#SBATCH --cpus-per-task=1                 # We reconmend experimenting with this value. One method to do this is to set NELM=5 and NSW=3 (or something small) in the INCAR and check how long calculation takes to finish. Can also check CPU efficiency after the job has finished with nn_seff <job_id>
+#SBATCH --mem=25G
 #SBATCH --hint=nomultithread
 
 
@@ -32,6 +32,7 @@ echo -e "The following GPUs are allocated to this job:\n$(nvidia-smi -L)"
 
 echo -e "\nRecall, MPI VASP distributes work and data over available MPI ranks on a per-orbital basis (in a round-robin fashion). MPI+OpenMP VASP, however, distributes the work of each Bloch orbital over the ${OMP_NUM_THREADS} OpenMP threads, and not between MPI tasks."
 
+export NO_STOP_MESSAGE=1
 
 module purge 2> /dev/null
 module load VASP/6.3.2-NVHPC-22.3-GCC-11.3.0-CUDA-11.6.2

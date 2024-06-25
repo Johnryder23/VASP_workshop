@@ -37,6 +37,8 @@ File specifying atomic coordinates. This file will not be update as the calculat
 
 ## Literature
 - Nieves-Pírez, Isidoro, et al. "Energy efficiency and performance analysis of a legacy atomic scale materials modeling simulator (VASP)." The Journal of Supercomputing (2024): 1-24.
+- https://www.nsc.liu.se/~pla/blog/2015/11/16/vaspgpu/
+
 
 
 ## Workshop material structure
