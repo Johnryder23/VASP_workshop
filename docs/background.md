@@ -16,7 +16,7 @@ VASPs main task is to solve the Kohn-Sham (KS) one electron orbitals of our syst
 
 \begin{equation}
 H^{ks}\psi_n(r)=\epsilon_n \psi_n(r)
-\tag{}
+\tag{a}
 \label{KS_energy}
 \end{equation}
 
