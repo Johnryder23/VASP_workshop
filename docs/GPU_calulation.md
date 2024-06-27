@@ -13,7 +13,7 @@ MPI VASP usually distributes work and data over available MPI ranks on a per-orb
 Say we have 2 GPUs and therefore 2 MPI tasks, and 12 OpenMP threads per task. Each OpenMP thread will get its own core, giving us 24 cores. Our Bloch orbitals are assigned to these 24 cores in the same round-robin fashion. You may notice OpenMP effectively does what `NCORE` did in older versions of VASP. Going forward, OpenMP will be used in place of the `NCORE` function.
 
 !!! Takeaways
-    test test test test test test  
+    OpenMP threads are set by --cpus-per-task and assigned to the variable $OMP_NUM_THREADS. The number of physical cores your job will get is equal to --cpus-per-task x --ntasks. The number of cores working on a single orbital will be equal to --cpus-per-task.  
 
 
 
