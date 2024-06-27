@@ -3,13 +3,14 @@
 ##General
 #SBATCH --job-name=vasp_gpu_calc
 #SBATCH --account=nesi99999
-#SBATCH --time=01:00:00
+#SBATCH --time=24:00:00
 #SBATCH --output=../output/vasp_job_%j/job_%j.out
 
 ##Parallel options
 #SBATCH --nodes=1
-#SBATCH --ntasks=36
-#SBATCH --mem=50G
+#SBATCH --partition=milan
+#SBATCH --ntasks=128
+#SBATCH --mem=120G
 #SBATCH --hint=nomultithread
 
 # Copy all files in current directory to the working directory

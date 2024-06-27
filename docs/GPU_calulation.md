@@ -1,30 +1,49 @@
 ##GPU calculation
 
-Here a large supercell, consisting of 232 Si atoms in a Cubic lattice (`POSCAR` obtained from [mp-1201492](https://next-gen.materialsproject.org/materials/mp-1201492/#crystal_structure)). That is a total of 581 KS orbitals!
+Here we have a large supercell, consisting of 232 Si atoms in a Cubic lattice (`POSCAR` obtained from [mp-1201492](https://next-gen.materialsproject.org/materials/mp-1201492/#crystal_structure)). That makes a total of 581 KS orbitals!
 
-First perform a typical electronic minimization on this structure using the following `INCAR`:
+If we were to perform a typical electronic minimization on this structure using the following `INCAR`:
+```
+#Calculation name
+ SYSTEM = my_VASP_calc
+
+#Electronic relaxation
+ ENCUT = 300              #specifies the cutoff energy in eV for the planewave basis set
+ EDIFF = 1E-4             #electronic break condition
+#NELM = 8                 #max number of electronic selfconsistency steps performed
+ ALGO = Normal            #algorithm used to optimize orbitals
+
+#Ionic relaxation
+ EDIFFG = -0.001          #ionic relaxation break condition. If negative, the relaxation is stopped when the norms of all the forces are smaller than |EDIFFG|.
+#NSW = 3                  #max number of ionic steps
+ IBRION = 1               #determines how the ions are updated and moved
+ ISYM = 0                 #symmetry treatment
+
+#Method
+ GGA = PE                 #specifies the exchange-coorelation functional used
+```
+And the following compute resources:
+```
+#SBATCH --nodes=1
+#SBATCH --partition=milan
+#SBATCH --ntasks=128
+#SBATCH --mem=50G
+#SBATCH --hint=nomultithread
+
+```
+i.e., an entire Milan node - this calculation took 01:14:40 to finish.
+
+Lets now try this with a single P100 GPU. A few changes are required in the `INCAR`:
 ```
 <print INCAR here>
-
 ```
-Notice
+text text text discuss INCAR changes
 
-
-
-
-
-Lets take note of the `INCAR` settings:
-
-<print INCAR here>
-
-
-
-
-Notice a few k
-
-
-
-
+Also, our Slurm submission script must be adapted:
+```
+<print slurm script here>
+```
+text text text discuss batch script changes
 
 
 
