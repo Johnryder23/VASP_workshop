@@ -35,6 +35,11 @@ theme:
       example: octicons/beaker-16
       quote: octicons/quote-16
 
+
+extra_css:
+  - stylesheets/extra.css
+
+
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
