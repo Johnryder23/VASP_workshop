@@ -12,7 +12,8 @@ MPI VASP usually distributes work and data over available MPI ranks on a per-orb
 
 Say we have 2 GPUs and therefore 2 MPI tasks, and 12 OpenMP threads per task. Each OpenMP thread will get its own core, giving us 24 cores. Our Bloch orbitals are assigned to these 24 cores in the same round-robin fashion. You may notice OpenMP effectively does what `NCORE` did in older versions of VASP. Going forward, OpenMP will be used in place of the `NCORE` function.
 
-!!! 
+!!! Takeaways
+    test test test test test test  
 
 
 
