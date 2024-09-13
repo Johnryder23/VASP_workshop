@@ -1,7 +1,7 @@
 # Intermediate topics for VASP users on NeSI
 
 ## Learning goals
-Many of you are experienced VASP users, and have been using the programme for some time. As VASP evolves and more features become available, however, it is easy to carry on with the same workflows and neglect new release features. It is important we optimise our VASP calculations because  VASP users **use the most core hours on NeSI, more than any other programme!**. In the last year
+Many of you are intermediate to experienced VASP users, and have been using the programme for some time. As VASP evolves and more features become available, however, it is easy to carry on with the same workflows and neglect new release features. It is important we optimise our VASP calculations and make the most  because  VASP users **use the most core hours on NeSI, more than any other programme!**. In the last year
 
 - understand parallelisation options of VASP and how to quickly optimize them for your problem
 - Explore machine learning capability of VASP
